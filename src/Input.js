@@ -176,8 +176,6 @@ class Input extends EventEmitter {
                 let firstPart = value.substring(0, cursor);
                 let lastPart = value.substring(cursor, value.length);
 
-                console.log(char, cursor, value, firstPart, lastPart);
-
                 this.setValue( firstPart + char + lastPart );
                 this.right();
             }
