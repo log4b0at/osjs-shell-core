@@ -60,7 +60,7 @@ class Shell extends EventEmitter {
     }
 
     println(htmlCode){
-        this.print('\n'+htmlCode);
+        this.print(htmlCode+'\n');
     }
 
     pushWritable(writable){
