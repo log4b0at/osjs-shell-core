@@ -1,0 +1,24 @@
+{
+  "name": "osjs-shell-core",
+  "version": "1.0.0",
+  "description": "Shell core",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/log4b0at/osjs-shell-core.git"
+  },
+  "keywords": [
+    "shell",
+    "core",
+    "osjs"
+  ],
+  "author": "log4b0at",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/log4b0at/osjs-shell-core/issues"
+  },
+  "homepage": "https://github.com/log4b0at/osjs-shell-core#readme"
+}
