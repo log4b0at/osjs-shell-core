@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/FiraCode-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/FiraCode-Bold.ttf");
+  font-weight: bold;
+}
 
 @keyframes cursorBlind{
   from {
