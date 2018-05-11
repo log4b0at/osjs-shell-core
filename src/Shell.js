@@ -21,18 +21,6 @@ class Shell extends EventEmitter {
         let input = this.input;
         let build = this;
 
-        input.textRenderer = function(text){
-            text = text.replace(/((?:["][^"\\]*(?:\\.[^"\\]*)*["]|['][^'\\]*(?:\\.[^'\\]*)*[']))/g, (entry) => {
-                return '<span style="color:lightgreen;">'+entry+'</span>'
-            });
-
-            text = text.replace(/(npm|git|electron)/g, (entry) => {
-                return '<span style="color:lightred; font-weight:bold">'+entry+'</span>'
-            });
-
-            return text;
-        }
-
         this.element.addEventListener('click', () => {
             this.input.focus();
         })
@@ -41,6 +29,10 @@ class Shell extends EventEmitter {
         //input.on('cursorActivity', () => this.cursorActivityListener() );
         // input.on('renderText', () => this.renderTextListener() );
     }
+	
+	setInputRenderer(renderer){
+		this.input.textRenderer = renderer;
+	}
 
     async stdin(message){
         var build = this;
@@ -48,10 +40,8 @@ class Shell extends EventEmitter {
         this.element.appendChild(this.input.element);
         let newEntry = new Promise( 
                 (resolve, reject) => {
-                    console.log('Promising');
                     build.input.on('enter', function(){
                         resolve( build.input.getValue() );
-                        console.log('Resolving');
                         build.input.clear();
                         build.input.blur();
                         build.input.element.remove();
