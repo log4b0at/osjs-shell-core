@@ -1,8 +1,8 @@
 {
   "name": "osjs-shell-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shell core",
-  "main": "index.js", 
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
