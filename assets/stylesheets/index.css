@@ -24,10 +24,16 @@
 .shell-container {
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   background: black;
   font-family: 'FiraCode';
   color: white;
   white-space: pre-wrap;
+}
+
+.shell-container::-webkit-scrollbar-thumb {
+    border: 1px solid #ffffff;
+    background: #929292;
 }
 
 .shell-input {
