@@ -36,14 +36,15 @@ class Shell extends EventEmitter {
 
     async stdin(message){
         var build = this;
+		this.input.clear();
+		this.input.focus();
         if(message) this.input.setMessage(message);
         this.element.appendChild(this.input.element);
         let newEntry = new Promise( 
                 (resolve, reject) => {
                     build.input.on('enter', function(){
                         resolve( build.input.getValue() );
-                        build.input.clear();
-                        build.input.blur();
+                        build.input.setCursor(0);
                         build.input.element.remove();
                     });
                 }
