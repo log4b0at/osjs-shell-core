@@ -1,6 +1,6 @@
 {
   "name": "osjs-shell-core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Shell core",
   "main": "index.js",
   "scripts": {
