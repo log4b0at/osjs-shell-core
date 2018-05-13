@@ -67,6 +67,10 @@ class Shell extends EventEmitter {
     pushWritable(writable){
         this.element.appendChild(writable.element);
     }
+	
+	clear(){
+		this.element.innerHTML = '';
+	}
 
     enterListener(){
         let input = this.input;
